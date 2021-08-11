@@ -11,6 +11,7 @@ export const CustomDragLayer = () => {
     currentOffset: monitor.getSourceClientOffset(),
     item: monitor.getItem() as DragItem,
   }));
+  
   return isDragging ? (
     <CustomDragLayerContainer>
       <div style={getItemStyles(currentOffset)}>

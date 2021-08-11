@@ -18,6 +18,7 @@ type ColumnProps = {
 export const Column = ({ text, index, id, isPreview = false }: ColumnProps) => {
   const { state, dispatch } = useAppState();
   const ref = useRef<HTMLDivElement>(null);
+
   const [, drop] = useDrop({
     accept: ["COLUMN", "CARD"],
     hover(item: DragItem) {
